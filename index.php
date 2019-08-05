@@ -1,12 +1,19 @@
 
 <?php
 
-use Code\Money\Data;
-
 require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/Models/Users.php';
 
-$a = new Data();
+use Code\Models\Users;
 
-$n = $a->list()->fetch();
+// $a = new Data();
 
-print_r($n);
+// $n = $a->list()->fetch();
+
+// echo json_encode($n);
+
+$a = new Users();
+
+$b = $a->list()->fetch();
+
+echo json_encode($b);

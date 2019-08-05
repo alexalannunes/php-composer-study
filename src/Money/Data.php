@@ -10,8 +10,10 @@ class Data {
 
   private $sql;
 
-  public function __construct() {
-    // ...
+  private $table;
+
+  public function __construct($table) {
+    $this->table = $table;
   }
 
   public function list() {

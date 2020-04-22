@@ -16,7 +16,7 @@ class Connect {
 
   public static function getInstance(): ?PDO {
     try {
-      self::$instance = new PDO(DNS, USER, PASS, OPTIONS);
+      self::$instance = new PDO(DSN, USER, PASS, OPTIONS);
     } catch (PDOException $e) {
       self::$error = $e;
     }

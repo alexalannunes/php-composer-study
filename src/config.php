@@ -13,4 +13,4 @@ define('OPTIONS', array(
   PDO::ATTR_STRINGIFY_FETCHES => FALSE,
   PDO::ATTR_EMULATE_PREPARES => FALSE,
 ));
-define('DNS', DRIVER . ':host=' . HOST . ';dbname=' . DATABASE);
+define('DSN', DRIVER . ':host=' . HOST . ';dbname=' . DATABASE);

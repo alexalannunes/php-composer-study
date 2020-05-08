@@ -15,10 +15,14 @@ class Connect {
   private static $error;
 
   public static function getInstance(): ?PDO {
-    try {
-      self::$instance = new PDO(DSN, USER, PASS, OPTIONS);
-    } catch (PDOException $e) {
-      self::$error = $e;
+    
+    // verifica se a instancia ja esta criada
+    if (self::$instance == null) {
+      try {
+        self::$instance = new PDO(DSN, USER, PASS, OPTIONS);
+      } catch (PDOException $e) {
+        self::$error = $e;
+      }
     }
 
     return self::$instance;
